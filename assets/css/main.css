@@ -12,14 +12,14 @@
 @import url(http://fonts.googleapis.com/css?family=Roboto:400,100);
 
 body {
-  /*font-family: 'Open Sans', sans-serif;*/
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Open Sans', sans-serif;
+  //font-family: 'Roboto', sans-serif;
   background: #f5f6f7;
   color: #f5f6f7;
-  font-size: 20px;
-  line-height: 36px;
+  //font-size: 20px;
+  //line-height: 36px;
   text-align: center;
-  font-weight: 100;}
+  //font-weight: 100;}
 
 
 nav ul {
@@ -159,9 +159,7 @@ a:active {
 
 #work .showcase {
   width: 100%;
-  padding: 0px;
-
-   }
+  padding: 0px; }
 
 .showcase-tiles {
   padding-top: 0px;
@@ -315,3 +313,10 @@ ul, menu, dir {
 #socials .twitter:hover {
 	color: #2094CA;
 }
+
+#socials .mail:hover {
+	color: #f39c12;
+}
+
+//#data{
+  //font-weight: 100;}
