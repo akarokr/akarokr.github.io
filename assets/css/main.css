@@ -12,14 +12,14 @@
 @import url(http://fonts.googleapis.com/css?family=Roboto:400,100);
 
 body {
-  font-family: 'Open Sans', sans-serif;
-  //font-family: 'Roboto', sans-serif;
+  //font-family: 'Open Sans', sans-serif;
+  font-family: 'Roboto', sans-serif;
   background: #f5f6f7;
   color: #f5f6f7;
-  //font-size: 20px;
-  //line-height: 36px;
+  font-size: 20px;
+  line-height: 36px;
   text-align: center;
-  //font-weight: 100;}
+  font-weight: 400;}
 
 
 nav ul {
@@ -317,6 +317,3 @@ ul, menu, dir {
 #socials .mail:hover {
 	color: #f39c12;
 }
-
-//#data{
-  //font-weight: 100;}
