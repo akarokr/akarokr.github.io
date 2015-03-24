@@ -264,6 +264,12 @@ ul, menu, dir {
 	padding: 18px;
 }
 
+#socials i {
+	font-size: 60px;
+	color: white;
+	padding: 18px;
+}
+
 #networks .dribbble:hover {
 	color: #ed6297;
 }
@@ -272,10 +278,38 @@ ul, menu, dir {
 	color: #3b5998;
 }
 
+#networks .github:hover {
+	color: black;
+}
+
+#networks .bitbucket:hover {
+	color: #0C0817;
+}
+
 #networks .twitter:hover {
 	color: #2094CA;
 }
 
 #networks .mail:hover {
 	color: #f39c12;
+}
+
+#networks .google-plus:hover {
+	color: red;
+}
+
+#socials .google-plus:hover {
+	color: red;
+}
+
+#socials .github:hover {
+	color: black;
+}
+
+#socials .bitbucket:hover {
+	color: #0C0817;
+}
+
+#socials .twitter:hover {
+	color: #2094CA;
 }
