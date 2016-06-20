@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>between the pages</title><link href="akarokr.github.io/" rel="alternate"></link><link href="akarokr.github.io/feeds/all.atom.xml" rel="self"></link><id>akarokr.github.io/</id><updated>2014-08-19T17:00:00-03:00</updated><entry><title>Hello Pelican!</title><link href="akarokr.github.io/primeiro-artigo.html" rel="alternate"></link><published>2014-08-19T17:00:00-03:00</published><author><name>Arthur Alves</name></author><id>tag:,2014-08-19:akarokr.github.io/primeiro-artigo.html</id><summary type="html">&lt;h1&gt;Testando nosso primeiro post no Pelican&lt;/h1&gt;
+&lt;p&gt;Pelican é um gerador de páginas estáticas criado em python para facilitar nossa vida, na 
+criação de blogs, landingpages ou site estáticos.&lt;/p&gt;</summary><category term="pelican"></category><category term="markdown"></category></entry></feed>
