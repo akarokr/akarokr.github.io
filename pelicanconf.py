@@ -52,7 +52,7 @@ MEDIUS_AUTHORS = {
     'Luiz Moura': {
         'description': """Blah""",
         'cover': 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Milky_Way_Arch.jpg/1920px-Milky_Way_Arch.jpg',
-        'image': 'https://github.com/akarokr/akarokr.github.io/raw/master/img/odin_valknut.webp',
+        'image': 'https://github.com/akarokr/akarokr.github.io/raw/master/content/img/odin_valknut.webp',
         'links': (('github-square', 'https://github.com/akarokr'),
                   ('twitter-square', 'https://twitter.com/akarokr')),
     }
@@ -62,11 +62,11 @@ MEDIUS_CATEGORIES = {
     'dev': {
         'description': 'A galaxy is a gravitationally bound system of stars, stellar remnants, interstellar gas and dust, and dark matter.',
         'logo': 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/GalacticRotation2.svg/250px-GalacticRotation2.svg.png',
-        'thumbnail': 'https://raw.githubusercontent.com/akarokr/akarokr.github.io/master/img/galaxia1.jpg'
+        'thumbnail': 'https://raw.githubusercontent.com/akarokr/akarokr.github.io/master/content/img/galaxia1.jpg'
     },
     'pelican': {
         'description': '',
         'logo': '',
-        'thumbnail': 'https://raw.githubusercontent.com/akarokr/akarokr.github.io/master/img/galaxia2.jpg'
+        'thumbnail': 'https://raw.githubusercontent.com/akarokr/akarokr.github.io/master/content/img/galaxia2.jpg'
     }
 }
