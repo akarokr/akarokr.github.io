@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-        <title>Hello Pelican!</title>
+        <title>Multiple SSH identities</title>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/pure-min.css" />
@@ -12,7 +12,7 @@
 <body>
 
     <div class="navigation pure-menu pure-menu-horizontal">
-        <a href="https://akarokr.github.io/" class="pure-menu-heading  pure-menu-link">between the pages</a>
+        <a href="https://akarokr.github.io/" class="pure-menu-heading  pure-menu-link">between words</a>
         <ul class="pure-menu-list">
             <li class="pure-menu-item"></li>
 
@@ -32,7 +32,7 @@
                 <a href="https://akarokr.github.io/category/tech.html" class="category">Tech</a><br />
 
                 <a class="author" href="https://akarokr.github.io/author/luiz-moura.html">Luiz Moura</a>
-                &mdash; <abbr title="2016-06-22T00:00:00-03:00">Qua 22 junho 2016</abbr>
+                &mdash; <abbr title="2016-06-23T00:00:00-03:00">Qui 23 junho 2016</abbr>
             </div>
         </div>
     </div>
@@ -42,21 +42,85 @@
 
             <div class="background-image-small">
                 <div class="title-container">
-                    <h1>Hello Pelican!</h1>
+                    <h1>Multiple SSH identities</h1>
                 </div>
             </div>
         </div>
     </div>
 
     <div class="entry-content">
-        <p>Vou escrever aqui um texto maravilhoso sobre usar mais de uma chave ssh num gitclient.</p>
+        <h1>Intro</h1>
+<p>This post shows how to use more than one SSH identity on different git servers in the same hostname (or different hostnames too).</p>
+<h1>Keygen</h1>
+<p>First thing you need to generate the ssh keys, to do this, use the following command:</p>
+<div class="highlight"><pre><span></span>$ ssh-keygen -f ~/.ssh/mykey -C <span class="s2">&quot;mykey&quot;</span>
+</pre></div>
+
+
+<p>He will generate the key under the name you provided.</p>
+<h1>SSH config file</h1>
+<p>After the key generation, you have to create (or update) your ~/.ssh/config file, after creating, open the file and add these lines at bottom.</p>
+<div class="highlight"><pre><span></span>Host mykey
+HostName gihub.com
+PreferredAuthentications publickey
+IdentityFile ~/.ssh/mykey
+</pre></div>
+
+
+<h1>Load the key</h1>
+<p>Now you need to load the key on git server (such as like github.com) and load the key on your computer. To load the key on computer run the following commands:</p>
+<div class="highlight"><pre><span></span>$ ps -e <span class="p">|</span> grep <span class="o">[</span>s<span class="o">]</span>sh-agent
+
+$ ssh-add -l <span class="c1"># list the current keys</span>
+
+$ ssh-add ~/.ssh/mykey <span class="c1">#if she&#39;s not there</span>
+</pre></div>
+
+
+<h1>A few things...</h1>
+<p>...you should know</p>
+<p>This is what you need to do with your <strong>ssh alias</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>Default address</th>
+<th>With alias</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>git@github.com:username/reponame.git</td>
+<td>git@alias:username/reponame.git</td>
+</tr>
+</tbody>
+</table>
+<h2>Cloning a repository</h2>
+<div class="highlight"><pre><span></span>$ git clone git@youralias:username/reponame.git
+</pre></div>
+
+
+<h2>Changing a existing repository</h2>
+<p>Edit the file .git/config on your git repo and udpate the line </p>
+<blockquote>
+<p>url = https://username@github.com/username/reponame.git</p>
+</blockquote>
+<p>To</p>
+<blockquote>
+<p>url = git@mykey:username/reponame.git</p>
+</blockquote>
+<h1>References</h1>
+<div class="highlight"><pre><span></span><span class="o">-</span> <span class="p">[</span><span class="n">Bitbucket</span> <span class="n">Tutorial</span><span class="p">](</span><span class="nl">https</span><span class="p">:</span><span class="c1">//confluence.atlassian.com/bitbucket/configure-multiple-ssh-identities-for-gitbash-mac-osx-linux-271943168.html)</span>
+</pre></div>
+
+
+<p>(proudly writed on <a href="http://www.vim.org/">vim</a>)</p>
     </div>
 
     <footer>
         <div class="tags">
-            <a href="https://akarokr.github.io/tag/tech.html">tech</a>
             <a href="https://akarokr.github.io/tag/git.html">git</a>
             <a href="https://akarokr.github.io/tag/dev.html">dev</a>
+            <a href="https://akarokr.github.io/tag/linunix.html">(lin)unix</a>
         </div>
         <div class="pure-g post-footer">
             <div class="pure-u-1 pure-u-md-1-2">
@@ -102,7 +166,7 @@
 
     <footer class="index-footer">
 
-        <a href="https://akarokr.github.io/" title="between the pages">between the pages</a>
+        <a href="https://akarokr.github.io/" title="between words">between words</a>
         <a href="https://akarokr.github.io/pages/about.html">About</a>
         <a href="https://akarokr.github.io/pages/categories.html">Categories</a>
 
