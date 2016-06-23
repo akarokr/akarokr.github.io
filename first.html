@@ -69,7 +69,7 @@ IdentityFile ~/.ssh/mykey
 
 <h1>Load the key</h1>
 <p>Now you need to load the key on git server (such as like github.com) and load the key on your computer. To load the key on computer run the following commands:</p>
-<div class="highlight"><pre><span></span>$ ps -e <span class="p">|</span> grep <span class="o">[</span>s<span class="o">]</span>sh-agent
+<div class="highlight"><pre><span></span>$ ps -e <span class="p">|</span> grep <span class="o">[</span>s<span class="o">]</span>sh-agent <span class="c1"># check if ssh-agent is up, id don&#39;t use: &quot;eval ssh-agent $SHELL&quot;</span>
 
 $ ssh-add -l <span class="c1"># list the current keys</span>
 
@@ -80,27 +80,20 @@ $ ssh-add ~/.ssh/mykey <span class="c1">#if she&#39;s not there</span>
 <h1>A few things...</h1>
 <p>...you should know</p>
 <p>This is what you need to do with your <strong>ssh alias</strong>:</p>
-<table>
-<thead>
-<tr>
-<th>Default address</th>
-<th align="center">With alias</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>git@github.com:username/reponame.git</td>
-<td align="center">git@alias:username/reponame.git</td>
-</tr>
-</tbody>
-</table>
-<h2>Cloning a repository</h2>
+<blockquote>
+<p>git@<strong>github.com</strong>:username/reponame.git  </p>
+</blockquote>
+<p>To this</p>
+<blockquote>
+<p>git@<strong>alias</strong>:username/reponame.git</p>
+</blockquote>
+<h3>Cloning a repository</h3>
 <div class="highlight"><pre><span></span>$ git clone git@youralias:username/reponame.git
 </pre></div>
 
 
-<h2>Changing a existing repository</h2>
-<p>Edit the file .git/config on your git repo and udpate the line </p>
+<h3>Changing a existing repository</h3>
+<p>Edit the file <strong>.git/config</strong> on your git repo and udpate the line </p>
 <blockquote>
 <p>url = https://username@github.com/username/reponame.git</p>
 </blockquote>
@@ -165,11 +158,13 @@ $ ssh-add ~/.ssh/mykey <span class="c1">#if she&#39;s not there</span>
 
     <footer class="index-footer">
 
-        <a href="https://akarokr.github.io/" title="between words">between words</a>
-        <a href="https://akarokr.github.io/pages/about.html">About</a>
-        <a href="https://akarokr.github.io/pages/categories.html">Categories</a>
+        <a  class="index-footer2" href="https://akarokr.github.io/" title="between words">between words</a>
+        <a  class="index-footer2" href="https://akarokr.github.io/pages/about.html">About</a>
+        <a  class="index-footer2" href="https://akarokr.github.io/pages/categories.html">Categories</a>
+        <a class="index-footer">proudly writed with vim</a>
 
     </footer>
 
+    <!--  -->
 </body>
 </html>
