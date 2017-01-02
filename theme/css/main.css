@@ -165,9 +165,9 @@ footer.index-footer2 {
     font-size: 12px;
     margin-right: 16px;
     text-decoration: none; }
-/*  footer.index-footer2 a:hover {
+  footer.index-footer2 a:hover {
     text-decoration: underline;
-    color: rgba(0, 0, 0, 0.6); }*/
+    color: rgba(0, 0, 0, 0.6); }
 
 div.post-meta img.post-avatar {
   max-width: 36px;
