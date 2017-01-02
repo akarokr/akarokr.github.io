@@ -760,4 +760,18 @@ div.pagination {
   color: #0000cf;
   font-weight: bold; }
 
+footer.index-footer-vim {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  padding: 10px 0 25px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1); }
+  footer.index-footer-vim a {
+    display: inline-block;
+    color: rgba(0, 0, 0, 0.3);
+    font-size: 12px;
+    margin-right: 16px;
+    text-decoration: none; }
+
+
 /*# sourceMappingURL=main.css.map */
