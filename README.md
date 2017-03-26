@@ -1,4 +1,4 @@
-# akarokr.github.io
+# akarokr.github.io ![.](https://raw.githubusercontent.com/akarokr/akarokr.github.io/master/favicon.ico)
 
 ## License
 
