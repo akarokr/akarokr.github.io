@@ -1,0 +1,78 @@
+body {
+    background: #222222;
+    padding: 40px;
+}
+h1 {
+
+    max-width: 600px;
+    margin: 0 auto;
+    font-weight: 400;
+    letter-spacing: -0.02em;
+    line-height: 1.32;
+    word-spacing: .1em;
+    font-family: 'Vollkorn', serif;
+    font-size: 24px;
+    color: #313e47;
+    margin-bottom: 7vh;
+
+    opacity: .95;
+}
+
+h1 small {
+    display: block;
+    font-size: .7em;
+    opacity: .5;
+    line-height: 3.6;
+}
+
+h1.quote {
+    opacity: .7;
+}
+
+.newthings {
+    color: #fff;
+}
+
+a {
+    font-family: Helvetica, Arial, sans-serif;
+    color: #678;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #ea3f35;
+}
+
+small {
+    font-size: .8em;
+    line-height: .8em;
+}
+
+#links {
+    position: absolute;
+    bottom: 2px; left: 50%; margin-left: -300px;
+    width: 600px; height: 40px;
+    font-size: 14px; color: #678;
+}
+
+#links > a {
+    display: inline-block;
+    padding-right: 30px;
+}
+
+@media only screen and (max-width : 767px) {
+    #links {
+        position: relative;
+        left: auto;
+        bottom: auto;
+        margin: 100px auto;
+        width: auto;
+        max-width: 600px;
+    }
+
+    #links > a {
+        display: block;
+        line-height: 2.5;
+    }
+
+}
