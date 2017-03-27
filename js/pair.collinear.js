@@ -1,7 +1,3 @@
-//// 0. Describe this demo
-window.demoDescription = "Pairs of points revolve around a center point. Draw a line whose color depends on whether the mouse position is on left or right side of the pair, or if the 3 points are collinear.";
-
-
 //// 1. Define Space and Form
 var colors = {
   a1: "#ff2d5d", a2: "#42dc8e", a3: "#2e43eb", a4: "#ffe359",
@@ -17,8 +13,8 @@ var center = space.size.$divide(2);
 var mouse = center.clone();
 
 var steps = 200;
-var r = Math.min( space.size.x, space.size.y ) * 0.4;
-var dr = Math.min( space.size.x, space.size.y ) * 0.4 / steps;
+var r = Math.min( space.size.x, space.size.y ) * 0.6;
+var dr = Math.min( space.size.x, space.size.y ) * 0.6 / steps;
 
 // create pairs
 for (var i=0; i<steps; i++) {
@@ -26,6 +22,7 @@ for (var i=0; i<steps; i++) {
   p.moveBy( center ).rotate2D( i*Math.PI/steps, center );
   pairs.push( p );
 }
+
 
 
 //// 3. Visualize, Animate, Interact
@@ -42,9 +39,10 @@ space.add({
 
       // Exact collinearity with return 0, but here we just check for a generous threshold
       if ( Math.abs( col ) < 200 ) {
-        form.stroke("#fff");
+        // form.stroke("#fff");
         form.line( pr );
         form.line( pr.clone().to( mouse ) );
+
 
       // not collinear, check whether mouse is on left or right side
       } else {
