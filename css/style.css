@@ -57,7 +57,7 @@ small {
 
 #links > a {
     display: inline-block;
-    padding-right: 30px;
+    padding-right: 10px;
 }
 
 @media only screen and (max-width : 767px) {
